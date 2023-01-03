@@ -1,0 +1,200 @@
+/*Variables*/
+:root {
+    --primary: rgb(52,58,64);
+    --secondary:rgb(194,195,190);
+    --white: #fff;
+    --black: #000;
+    --transition: 0.4s linear;
+}
+/*Basic style*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+ul {
+    list-style: none;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.container {
+    width: 70%;
+    margin: auto;
+    box-shadow: 0 0 20px var(--secondary);
+    border-radius: 20px;
+}
+.container::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.py {
+    padding: 100px 0;
+}
+/*Nav*/
+nav {
+    padding: 20px 20px;
+    background-color: var(--primary);
+
+}
+nav a {
+    float: right;
+    color: var(--white);
+    margin-left: 10px;
+}
+/*Main*/
+main {
+    padding: 40px;
+}
+main ul {
+    float: left;
+}
+main ul li {
+    display: inline-block;
+}
+main  ul li a {
+    color: var(--black);
+    font-size: 18px;
+    padding: 190px;
+    transition: var(--transition);
+}
+main a:hover {
+    color: var(--secondary);
+    
+}
+/*Header*/
+header {
+    position: relative;
+}
+header img {
+    height: 600px;
+}
+header h1 {
+    font-size: 3.6rem;
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    transform: translate(-80%,-60%);
+    color: var(--black);
+    text-shadow: 0 0 20px var(--white);
+}
+/*Singel House*/
+.single {
+    margin-top: 30px;
+}
+div article:first-child {
+    float: left;
+    width: 48%;
+   
+}
+div article:last-child {
+    float: right;
+    width: 48%;
+}
+.wrapper {
+    margin: 20px;
+}
+.single h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--primary);
+    text-shadow: 0 0 20px var(--secondary);
+}
+.single h5 {
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--primary);
+    text-shadow: 0 0 20px var(--secondary);
+    padding: 20px;
+}
+.single p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--primary);
+}
+article img {
+    border-radius: 20px;
+}
+/*Products*/
+.products {
+    margin-top: 20px;
+}
+.products div article{
+    float: left;
+    width: 30%;
+}
+.products h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--primary);
+    text-shadow: 0 0 20px var(--secondary);
+}
+.products h4 {
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--primary);
+    text-shadow: 0 0 20px var(--secondary);
+    padding: 20px;
+}
+ button {
+    padding: 15px 25px;
+    margin-left: 97px;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    color: var(--primary);
+    background-color: var(--secondary);
+
+}
+button:hover {
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+/**FOOTER*/
+footer p {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--primary);
+    text-shadow: 0 0 13px var(--primary);
+}
+
+/*Responsive*/
+@media(max-width:767px){
+    .container {
+        width: 90%;
+    }
+    nav a {
+        float: none;
+        margin-left: 50px;
+    }
+    main ul {
+        float: none;
+    }
+    main ul li a {
+        padding: 10px;
+        font-size: 0.9rem
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    div article:first-child {
+        width: 100%;
+    }
+    div article:last-child{
+        width: 100%;
+    }
+    .products div article {
+        width: 100%;
+    }
+}
